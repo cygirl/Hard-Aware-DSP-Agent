@@ -1,0 +1,11 @@
+make: Entering directory '/home/ubuntu/dsp_workspace'
+gcc -Wall -O3 -pthread -I. -c dsp_core.c -o dsp_core.o
+dsp_core.c: In function ‘apply_adaptive_wiener_filter’:
+dsp_core.c:42:5: error: implicit declaration of function ‘calculate_variance’ [-Werror=implicit-function-declaration]
+   42 |     int32_t var = calculate_variance(data_array, length);
+      |     ^~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+make: *** [Makefile:14: dsp_core.o] Error 1
+make: Leaving directory '/home/ubuntu/dsp_workspace'
+
+[Core Dump] Segmentation fault (core dumped) at memory location 0x00000000.
